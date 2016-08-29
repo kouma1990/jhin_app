@@ -18,12 +18,15 @@
 
 	<body ng-controller="MyController" class="container">
 		<h1>jin占い...</h1>
-		<br><br>
+		
+
 		<button ng-click="onClickUranai()">占う...</button>
-
-		<h2>{{result}}</h2>
-		<img src="img/jhin-wallpaper.jpg" class="img-rounded" width="100%">
-
+		<h2>今日は... </h2>
+		<h2><div class="alert alert-info" role="alert" ng_if="result != ''">{{result}}</div></h2>
+		<h2 ng_if="result == ''"><div class="alert" role="alert">　　</div></h2>
+		
+		<img src="img/jhin-wallpaper.jpg" class="img-rounded" width="100%"><br>
+		
 		<a href="https://www.youtube.com/watch?v=OjBB5MshyBY">眠る...</a>	
 
 		
